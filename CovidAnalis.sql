@@ -69,7 +69,7 @@ where nullif(continent,'') is not null
 order by 1,2;
 
 -- if you look for the problem (covid) you might w for a solution to (vaccine) 
-
+-- looking for the percentage of population who got vaccinated
 
 select	d.continent,d.location,d.date,d.population,v.new_vaccinations,
 sum(v.new_vaccinations) over (partition by d.location order by d.location,d.date) as VaccinatedPeople,
